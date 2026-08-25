@@ -1,0 +1,17 @@
+# Example TLS edge for FrankenFile. Replace the site address and upstream.
+#
+# Only FrankenFile HTML is compressed: download representations must pass
+# through untouched so Content-Length, ranges, ETags, and RFC 9530 digests stay
+# byte-stable for resumable transfers.
+
+files.example.com {
+	@frankenfile path /frankenfile /frankenfile/*
+	handle @frankenfile {
+		encode zstd gzip {
+			match {
+				header Content-Type text/html*
+			}
+		}
+		reverse_proxy 127.0.0.1:18766
+	}
+}

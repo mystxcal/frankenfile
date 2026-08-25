@@ -1,0 +1,52 @@
+[package]
+name = "frankenfile"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.88"
+description = "A secure, immutable, six-digit file airdrop server"
+license = "MIT"
+
+[dependencies]
+anyhow = "1.0.103"
+axum = { version = "0.8.9", features = ["form", "http1", "http2", "multipart", "tokio"] }
+base64 = "0.22.1"
+blake3 = "1.8.5"
+clap = { version = "4.6.1", features = ["derive", "env"] }
+cookie = "0.18.1"
+getrandom = "0.4.3"
+hex = "0.4.3"
+httpdate = "1.0.3"
+humantime = "2.3.0"
+ipnet = "2.11.0"
+libc = "0.2.183"
+maud = { version = "0.27.0", features = ["axum"] }
+mime_guess = "2.0.5"
+percent-encoding = "2.3.2"
+reqwest = { version = "0.12.28", default-features = false, features = ["blocking", "rustls-tls"] }
+rusqlite = { version = "0.40.1", features = ["bundled"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+serde_urlencoded = "0.7.1"
+sha2 = "0.10.9"
+subtle = "2.6.1"
+tempfile = "3.27.0"
+thiserror = "2.0.18"
+time = { version = "0.3.53", features = ["formatting", "macros", "serde"] }
+tokio = { version = "1.52.3", features = ["full"] }
+tokio-util = { version = "0.7.18", features = ["io"] }
+tower = { version = "0.5.3", features = ["util"] }
+tower-http = { version = "0.7.0", features = ["fs", "trace"] }
+tracing = "0.1.44"
+tracing-subscriber = { version = "0.3.23", features = ["env-filter", "fmt", "json"] }
+walkdir = "2.5.0"
+zip = { version = "=8.6.0", default-features = false, features = ["deflate"] }
+zeroize = { version = "1.8.2", features = ["zeroize_derive"] }
+
+[dev-dependencies]
+http-body-util = "0.1.3"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+panic = "abort"
+strip = "symbols"

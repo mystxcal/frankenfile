@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title description">
+  <title id="title">FrankenFile</title>
+  <desc id="description">A self-hosted file drop: hand someone six characters and they get the files.</desc>
+
+  <defs>
+    <linearGradient id="ff-spectral" gradientUnits="userSpaceOnUse" x1="366" y1="120" x2="516" y2="176">
+      <stop offset="0" stop-color="#9bffdc"/>
+      <stop offset=".5" stop-color="#6ee7ff"/>
+      <stop offset="1" stop-color="#b5a3ff"/>
+    </linearGradient>
+    <linearGradient id="ff-seam" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9bffdc" stop-opacity="0"/>
+      <stop offset=".18" stop-color="#9bffdc" stop-opacity=".85"/>
+      <stop offset=".52" stop-color="#6ee7ff" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#b5a3ff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ff-meter" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9bffdc"/>
+      <stop offset="1" stop-color="#6ee7ff"/>
+    </linearGradient>
+    <linearGradient id="ff-cap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#12201f"/>
+      <stop offset=".55" stop-color="#0a1216"/>
+      <stop offset="1" stop-color="#060c10"/>
+    </linearGradient>
+    <radialGradient id="ff-sky" cx=".28" cy="0" r=".85">
+      <stop offset="0" stop-color="#6ee7ff" stop-opacity=".13"/>
+      <stop offset=".5" stop-color="#9bffdc" stop-opacity=".045"/>
+      <stop offset="1" stop-color="#9bffdc" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ff-bloom" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#9bffdc" stop-opacity=".16"/>
+      <stop offset=".6" stop-color="#6ee7ff" stop-opacity=".045"/>
+      <stop offset="1" stop-color="#6ee7ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ff-drift" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#b5a3ff" stop-opacity=".13"/>
+      <stop offset="1" stop-color="#b5a3ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="ff-grain" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r=".6" fill="#dff6f1" fill-opacity=".05"/>
+    </pattern>
+    <clipPath id="ff-card">
+      <rect width="1200" height="320" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#ff-card)">
+    <rect width="1200" height="320" fill="#05080b"/>
+    <rect width="1200" height="320" fill="url(#ff-grain)"/>
+    <rect width="1200" height="320" fill="url(#ff-sky)"/>
+    <ellipse cx="120" cy="330" rx="340" ry="150" fill="url(#ff-drift)"/>
+    <ellipse cx="914" cy="150" rx="290" ry="145" fill="url(#ff-bloom)"/>
+    <rect width="1200" height="1.5" fill="url(#ff-seam)"/>
+  </g>
+  <rect x=".5" y=".5" width="1199" height="319" rx="19.5" fill="none" stroke="#16262b"/>
+
+  <!-- Identity -->
+  <rect x="72" y="63" width="24" height="2" rx="1" fill="#9bffdc"/>
+  <text x="108" y="70" fill="#9bffdc" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11.5" letter-spacing="3.4">SELF-HOSTED FILE DROP</text>
+
+  <text x="70" y="170" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="76" font-weight="700" letter-spacing="-2.4">
+    <tspan fill="#f2f7f6">Franken</tspan><tspan fill="url(#ff-spectral)">File</tspan>
+  </text>
+
+  <text x="73" y="210" fill="#93a6a5" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="19">Hand someone six characters. They get the files.</text>
+
+  <rect x="73" y="236" width="430" height="1" fill="#16262b"/>
+  <text x="73" y="264" fill="#5f7173" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" letter-spacing="2.6">IMMUTABLE · EXPIRING · NO ACCOUNT · NO JAVASCRIPT</text>
+
+  <!-- Artifact: the pickup code -->
+  <text x="700" y="70" fill="#5f7173" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="11" letter-spacing="2.8">PICKUP CODE</text>
+
+  <g>
+    <rect x="700" y="94" width="62" height="86" rx="14" fill="url(#ff-cap)" stroke="#22514c"/>
+    <rect x="773" y="94" width="62" height="86" rx="14" fill="url(#ff-cap)" stroke="#22514c"/>
+    <rect x="846" y="94" width="62" height="86" rx="14" fill="url(#ff-cap)" stroke="#22514c"/>
+    <rect x="919" y="94" width="62" height="86" rx="14" fill="url(#ff-cap)" stroke="#22514c"/>
+    <rect x="992" y="94" width="62" height="86" rx="14" fill="url(#ff-cap)" stroke="#22514c"/>
+    <rect x="1065" y="94" width="62" height="86" rx="14" fill="url(#ff-cap)" stroke="#22514c"/>
+  </g>
+  <g fill="none" stroke="#9bffdc" stroke-opacity=".16" stroke-linecap="round">
+    <path d="M714 95.5h34"/>
+    <path d="M787 95.5h34"/>
+    <path d="M860 95.5h34"/>
+    <path d="M933 95.5h34"/>
+    <path d="M1006 95.5h34"/>
+    <path d="M1079 95.5h34"/>
+  </g>
+
+  <g font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="38" font-weight="700" text-anchor="middle">
+    <g fill="#b9ffe9">
+      <text x="731" y="151">W</text><text x="804" y="151">7</text><text x="877" y="151">K</text>
+      <text x="950" y="151">4</text><text x="1023" y="151">Q</text><text x="1096" y="151">M</text>
+    </g>
+  </g>
+
+  <!-- Instrument row -->
+  <rect x="700" y="220" width="427" height="3" rx="1.5" fill="#132522"/>
+  <rect x="700" y="220" width="158" height="3" rx="1.5" fill="url(#ff-meter)"/>
+  <circle cx="858" cy="221.5" r="3.5" fill="#9bffdc"/>
+  <text x="700" y="248" fill="#5f7173" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" letter-spacing="2.2">CODE EXPIRES</text>
+  <text x="1127" y="248" fill="#93a6a5" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="10.5" letter-spacing="1.4" text-anchor="end">15m</text>
+</svg>

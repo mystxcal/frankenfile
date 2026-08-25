@@ -1,0 +1,13 @@
+[Unit]
+Description=Daily FrankenFile retention sweep
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=30m
+Persistent=true
+AccuracySec=5m
+Unit=frankenfile-gc.service
+
+[Install]
+WantedBy=timers.target
+
